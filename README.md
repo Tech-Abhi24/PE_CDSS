@@ -45,37 +45,7 @@ This project provides an interactive Clinical Decision Support System that helps
 
 ---
 
-# 📸 Screenshots
 
-## Login Page
-
-<img src="assets/login.png" width="900">
-
----
-
-## Dashboard
-
-<img src="assets/dashboard.png" width="900">
-
----
-
-## Patient Profile
-
-<img src="assets/profile.png" width="900">
-
----
-
-## Analytics
-
-<img src="assets/analytics.png" width="900">
-
----
-
-## Patient Registration
-
-<img src="assets/registration.png" width="900">
-
----
 
 # 🏗️ System Architecture
 
