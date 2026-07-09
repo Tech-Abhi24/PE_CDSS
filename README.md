@@ -161,6 +161,14 @@ PDF Report Generation
 
 ---
 
+---
+
+# Login Credentials:
+Username-doctor
+Password-admin
+
+---
+
 # 🚀 Installation
 
 ## Installation
