@@ -1,73 +1,208 @@
-# PE_CDSS
-A Streamlit-based Clinical Decision Support System (CDSS) for Pulmonary Embolism risk assessment with patient analytics, risk prediction, and PDF report generation.
-# Pulmonary Embolism Clinical Decision Support System (PE-CDSS)
+# 🫁 Pulmonary Embolism Clinical Decision Support System (PE-CDSS)
 
-## Overview
-
-This project is a Clinical Decision Support System (CDSS) developed for Pulmonary Embolism (PE) risk assessment.
-
-The application allows clinicians to:
-
-- Login securely
-- View patient profiles
-- Calculate PE Risk Score
-- Generate clinical recommendations
-- Visualize patient analytics
-- Export PDF reports
+A Clinical Decision Support System (CDSS) developed using **Python** and **Streamlit** to assist clinicians in the **early assessment of Pulmonary Embolism (PE)** using a **Wells-inspired clinical scoring model**.
 
 ---
 
-## Features
+# 📌 Overview
 
-- Doctor Login
-- Patient Dashboard
-- Risk Prediction
-- Clinical Recommendation
-- Analytics Dashboard
-- PDF Report Generation
-- Streamlit Interface
+Pulmonary Embolism (PE) is a life-threatening condition that requires rapid assessment in the Emergency Department.
+
+This project provides an interactive Clinical Decision Support System that helps healthcare professionals:
+
+- Assess PE risk
+- Calculate Wells-inspired clinical score
+- Classify patients into PE probability groups
+- Display ICU clinical information
+- Generate PDF clinical reports
+- Monitor patients through an analytics dashboard
+
+> **Note:** This system is intended for educational and research purposes only. It supports clinical decision-making and does not replace physician judgment.
 
 ---
 
-## Technologies Used
+# ✨ Features
+
+✅ Doctor Login Authentication
+
+✅ Dashboard for PE Risk Monitoring
+
+✅ Patient Registration Form
+
+✅ Patient Search by Patient ID
+
+✅ Wells-inspired PE Risk Scoring
+
+✅ Clinical Recommendation Generation
+
+✅ ICU Patient Monitoring
+
+✅ Interactive Analytics Dashboard
+
+✅ PDF Report Generation
+
+✅ Responsive Streamlit UI
+
+---
+
+# 📸 Screenshots
+
+## Login Page
+
+<img src="assets/login.png" width="900">
+
+---
+
+## Dashboard
+
+<img src="assets/dashboard.png" width="900">
+
+---
+
+## Patient Profile
+
+<img src="assets/profile.png" width="900">
+
+---
+
+## Analytics
+
+<img src="assets/analytics.png" width="900">
+
+---
+
+## Patient Registration
+
+<img src="assets/registration.png" width="900">
+
+---
+
+# 🏗️ System Architecture
+
+```
+                Doctor
+
+                   │
+
+             Login Authentication
+
+                   │
+
+            Patient Registration
+
+                   │
+
+            Patient Dataset (.xlsx)
+
+                   │
+
+           Data Validation & Cleaning
+
+                   │
+
+           Wells-inspired Risk Engine
+
+                   │
+
+        PE Probability Classification
+
+                   │
+
+        Dashboard / Analytics / Report
+
+                   │
+
+         Clinical Recommendation
+```
+
+---
+
+# 📂 Project Structure
+
+```
+PE_CDSS_System
+│
+├── app.py
+├── cdss_brain.py
+├── ui_style.py
+├── style.css
+├── requirements.txt
+│
+├── data
+│   └── patients.xlsx
+│
+├── pages
+│   ├── login.py
+│   ├── Dashboard.py
+│   ├── Patient_Profile.py
+│   ├── Analytics.py
+│   └── Patient_Registration.py
+│
+├── assets
+│
+├── utils
+│
+└── README.md
+```
+
+---
+
+# 🧠 Clinical Workflow
+
+```
+Doctor Login
+
+↓
+
+Patient Registration / Search
+
+↓
+
+Patient Clinical Parameters
+
+↓
+
+Wells-inspired Risk Calculation
+
+↓
+
+PE Probability Classification
+
+↓
+
+Clinical Recommendation
+
+↓
+
+PDF Report Generation
+```
+
+---
+
+# ⚙️ Technologies Used
 
 - Python
 - Streamlit
 - Pandas
 - Plotly
+- OpenPyXL
 - FPDF
+- NumPy
 
 ---
 
-## Folder Structure
-
-```
-PE-CDSS-System
-│
-├── app.py
-├── cdss_brain.py
-├── dashboard.py
-├── report.py
-├── pages/
-├── data/
-├── screenshots/
-└── requirements.txt
-```
-
----
-
-## Installation
+# 🚀 Installation
 
 Clone the repository
 
 ```bash
-git clone https://github.com/YourUsername/PE-CDSS-System.git
+git clone https://github.com/YOUR_USERNAME/PE_CDSS_System.git
 ```
 
-Move inside project
+Go inside project
 
 ```bash
-cd PE-CDSS-System
+cd PE_CDSS_System
 ```
 
 Install dependencies
@@ -76,7 +211,7 @@ Install dependencies
 pip install -r requirements.txt
 ```
 
-Run
+Run the application
 
 ```bash
 streamlit run app.py
@@ -84,66 +219,126 @@ streamlit run app.py
 
 ---
 
-## Dataset
+# 📊 Dataset
 
-The patient dataset is stored inside the **data** folder.
+The project uses an ICU clinical dataset stored as
+
+```
+data/patients.xlsx
+```
+
+The dataset contains:
+
+- Patient ID
+- Case ID
+- Birth Date
+- Gender
+- GCS
+- Blood Pressure
+- MAP
+- Respiratory Rate
+- Creatinine
+- Bilirubin
+- Platelets
+- Vasopressor Doses
+- Oxygenation (PaO₂/FiO₂)
 
 ---
 
+# 🫁 PE Risk Classification
+
+The system calculates a Wells-inspired clinical score.
+
+| Score | Probability |
+|--------|-------------|
+| Low | Low PE Probability |
+| Medium | Moderate PE Probability |
+| High | High PE Probability |
 
 ---
 
-## Author
+# 📈 Modules
 
-Abhishek Verma
+### Dashboard
 
-M.Sc. Data Science and Machine Learning
+- Hospital Statistics
+- High Risk Alerts
+- ICU Monitoring
+- Recent Patients
+
+---
+
+### Patient Profile
+
+- Patient Information
+- Vital Signs
+- Laboratory Results
+- Wells Score
+- PE Probability
+- Clinical Recommendation
+- PDF Report
+
+---
+
+### Analytics
+
+- PE Probability Distribution
+- Wells Score Analysis
+- Oxygenation Analysis
+- Clinical Insights
+
+---
+
+### Patient Registration
+
+Allows clinicians to register a new ICU patient and automatically save the patient record.
+
+---
+
+# 📄 PDF Report
+
+The system generates a downloadable clinical report including
+
+- Patient Information
+- Vital Signs
+- Wells Score
+- PE Probability
+- Clinical Findings
+- Clinical Recommendation
+
+---
+
+# 🔒 Security Features
+
+- Login Authentication
+- Session Management
+- Data Validation
+- Patient ID Validation
+
+---
+
+# 📚 Academic Context
+
+Developed as part of the
+
+**Clinical Decision Support Systems (CDSS)**
+
+Master of Data Science
+
+Carl von Ossietzky University of Oldenburg
+
+---
+
+# 👨‍💻 Author
+
+**Abhishek Verma**
+
+M.Sc. Data Science
 
 University of Oldenburg
 
-Requirements.txt
-streamlit
-pandas
-numpy
-plotly
-openpyxl
-fpdf
+---
 
+# 📜 License
 
-
-.gitignore
-
-__pycache__/
-*.pyc
-*.pyo
-
-.venv/
-venv/
-
-.env
-
-.idea/
-.vscode/
-
-reports/
-
-*.pdf
-
-
-LICENSE
-
-MIT License
-
-
-#Bash
-git init
-
-git add .
-
-git commit -m "Initial commit - PE CDSS System"
-
-git branch -M main
-
-git remote add origin https://github.com/<your-username>/PE-CDSS-System.git
-
-git push -u origin main
+This project is released under the MIT License.
