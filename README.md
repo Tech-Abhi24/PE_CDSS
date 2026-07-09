@@ -163,31 +163,34 @@ PDF Report Generation
 
 # 🚀 Installation
 
-Clone the repository
+## Installation
+
+### Clone Repository
 
 ```bash
 git clone https://github.com/YOUR_USERNAME/PE_CDSS_System.git
 ```
 
-Go inside project
+### Open Project
 
 ```bash
 cd PE_CDSS_System
 ```
 
-Install dependencies
+### Install Requirements
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Run the application
+### Run Application
 
 ```bash
 streamlit run app.py
 ```
 
 ---
+
 
 # 📊 Dataset
 
